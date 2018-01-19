@@ -72,6 +72,7 @@ keystone.set('cloudinary folders', true);
 // 可选, 将强制cloudinary服务通过HTTPS传输
 keystone.set('cloudinary secure', true);
 
+console.log('env', keystone.get('env'));
 if (keystone.get('env') === 'production') {
 	// keystone.set('cloudinary config', process.env.CLOUDINARY_URL);
 	keystone.set('cookie secret', process.env.COOKIE_SECRET);
