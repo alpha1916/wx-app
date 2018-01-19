@@ -1,0 +1,80 @@
+<!-- <import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'swiper'}}"/>
+
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:key="unique" wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" mode="aspectFit" width="355" height="150"/>
+        </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">指示点</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">自动播放</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section page-section-spacing">
+      <view class="page-section-title">
+        <text>幻灯片切换时长(ms)</text>
+        <text class="info">{{duration}}</text>
+      </view>
+      <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000"/>
+      <view class="page-section-title">
+        <text>自动播放间隔时长(ms)</text>
+        <text class="info">{{interval}}</text>
+      </view>
+      <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000"/>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view> -->
+
+<view class="container1">
+  <view class="swiper">
+    <swiper indicator-dots="{{true}}"
+      autoplay="{{true}}" 
+      interval="1000" 
+      duration="{{500}} 
+      style="width:{{swiperWidth}}rpx;height:{{swiperHeight}}rpx"
+    >
+      <block wx:key="unique" wx:for="{{imgUrls}}">
+      <swiper-item class="swiper-item">
+          <image class="image" src="{{item}}"  /> 
+      </swiper-item>
+      </block>
+    </swiper>
+  </view> 
+
+  <view class='list-view'>
+    <block wx:key="unique" wx:for="{{imgUrls}}">
+      <view class="list-item">
+        <image class="item-image" src="{{item}}"/> 
+        <text>物品名称</text>
+      </view>
+    </block>
+  </view>
+  
+  <!-- <image src="{{imgUrls[0]}}" mode="aspectFit"/> -->
+  <!-- <image src="{{imgUrls[1]}}" mode="scaleToFit"/>
+  <image src="{{imgUrls[2]}}" mode="aspectFit"/>  -->
+</view>

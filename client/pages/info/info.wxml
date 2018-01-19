@@ -1,0 +1,29 @@
+<view class="info-container">
+  <view class="info-title">
+    <label>{{name}}</label>
+    <image src="{{logoPath}}" class="logo"/>
+  </view>
+  <view class="info-item" bindtap='openMap'>
+    <text>{{address}}</text>
+    <text>></text>
+  </view>
+
+  <view class="info-item" >
+    <text>{{work}}</text>
+  </view>
+
+  <view class="info-item" bindtap='call'>
+    <text>{{phoneLabel}}{{phoneNum}}</text>
+    <text>></text>
+  </view>
+
+  <!-- <view class="info-item" session-from="weapp">
+    <text>点击气泡icon打开客服消息界面</text>
+    <text>></text>
+  </view> -->
+ 
+  <view class="info-item">
+    <text>点击气泡icon打开客服消息界面</text>
+    <contact-button size="40" session-from="weapp"></contact-button>
+  </view> 
+</view>

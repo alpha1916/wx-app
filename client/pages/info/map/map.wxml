@@ -1,0 +1,10 @@
+<view class="map-container">
+  <map
+    style="width: 100%; height:{{mapHeight}}pt;"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    markers="{{markers}}"
+    covers="{{covers}}"
+    >
+  </map>
+</view>
