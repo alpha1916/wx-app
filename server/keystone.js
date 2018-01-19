@@ -71,6 +71,12 @@ keystone.set('cloudinary prefix', 'keystone');
 keystone.set('cloudinary folders', true);
 // 可选, 将强制cloudinary服务通过HTTPS传输
 keystone.set('cloudinary secure', true);
+
+if (keystone.get('env') === 'production') {
+	// keystone.set('cloudinary config', process.env.CLOUDINARY_URL);
+	keystone.set('cookie secret', process.env.COOKIE_SECRET);
+	// keystone.set('mandrill api key', process.env.MANDRILL_API_KEY);
+}
 // keystone.set('cloudinary upload_preset', 'd8uq1scc');
 
 // Start Keystone to connect to your database and initialise the web server
