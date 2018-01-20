@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 
 exports = module.exports = function (req, res) {
-	let data = {};
+	var data = {};
 	var qc = 0;
 	var end = function () {
 		++qc;
@@ -38,7 +38,7 @@ exports = module.exports = function (req, res) {
 		end();
 	});
 
-	q = keystone.list('BannerGoods').model.find();
+	q = keystone.list('Banner').model.find();
 	q.exec(function (err, results) {
 		data.banner = results;
 		end();

@@ -73,6 +73,8 @@ keystone.set('cloudinary folders', true);
 keystone.set('cloudinary secure', true);
 
 console.log('env', keystone.get('env'));
+var cooketSecret = '8f1bbe8c0a2e1fc6f54da09060c0a7e775fd3f7bb05b33ab58a4438901f11bd75b7673fe1dbf93bd240705d5e049fc8c57c219abf357ce4b93edc845f882e4de';
+keystone.set('cookie secret', cooketSecret);
 if (keystone.get('env') === 'production') {
 	// keystone.set('cloudinary config', process.env.CLOUDINARY_URL);
 	keystone.set('cookie secret', process.env.COOKIE_SECRET);
