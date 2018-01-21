@@ -32,6 +32,9 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'ssl': true,
+	'ssl cert': 'cert/public.pem',
+	'ssl key': 'cert/214459320060203.key',
 });
 
 // Load your project's Models
